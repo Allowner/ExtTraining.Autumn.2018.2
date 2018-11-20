@@ -54,5 +54,10 @@
       <Name>No8.Solution</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="File.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
