@@ -49,22 +49,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CanonPrinter.cs" />
-    <Compile Include="CanonPrinterFactory.cs" />
-    <Compile Include="CustomPrinter.cs" />
-    <Compile Include="EpsonPrinter.cs" />
-    <Compile Include="EpsonPrinterFactory.cs" />
-    <Compile Include="IPrinterFactory.cs" />
-    <Compile Include="Printer.cs" />
-    <Compile Include="PrinterEventArgs.cs" />
-    <Compile Include="PrinterManager.cs" />
+    <Compile Include="Logger\LoggerNLog.cs" />
+    <Compile Include="Printers\CanonPrinter.cs" />
+    <Compile Include="Factories\CanonPrinterFactory.cs" />
+    <Compile Include="Printers\CustomPrinter.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Printers\EpsonPrinter.cs" />
+    <Compile Include="Factories\EpsonPrinterFactory.cs" />
+    <Compile Include="Logger\ILog.cs" />
+    <Compile Include="Factories\IPrinterFactory.cs" />
+    <Compile Include="Printers\Printer.cs" />
+    <Compile Include="Printers\PrinterEventArgs.cs" />
+    <Compile Include="Manager\PrinterManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="NLog.config">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
